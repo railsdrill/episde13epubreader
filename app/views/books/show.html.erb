@@ -1,0 +1,16 @@
+<div data-controller="epub">
+<p style="color: green"><%= notice %></p>
+
+<%= render @book %>
+
+<div>
+  <%= link_to "Edit this book", edit_book_path(@book) %> |
+  <%= link_to "Back to books", books_path %>
+
+  <%= button_to "Destroy this book", @book, method: :delete %>
+  <%= link_to 'Download', rails_blob_path(@book.novel, disposition: :attachment), id: "download" %>
+</div>
+<div id="area"></div>
+<a id="prev" href="#prev" class="arrow">‹</a>
+<a id="next" href="#next" class="arrow">›</a>
+</div>
